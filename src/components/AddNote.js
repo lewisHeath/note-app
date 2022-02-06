@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState } from 'react';
 
 function AddNote({ handleAddNote }) {
     const [noteText, setNoteText] = React.useState('');
