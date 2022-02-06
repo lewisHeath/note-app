@@ -1,14 +1,14 @@
 import React from 'react';
+import { DarkModeSwitch } from 'react-toggle-dark-mode';
 
-function Header({ handleToggleDarkMode }) {
+function Header({ handleToggleDarkMode, darkMode }) {
     return (
         <div className='header'>
             <h1>Notes</h1>
-            <button className='save' onClick={() => 
-                handleToggleDarkMode((previousDarkMode) => 
-                    !previousDarkMode
-                )
-            }>Toggle Mode</button>
+            <DarkModeSwitch
+                onChange={handleToggleDarkMode}
+                checked={darkMode}
+            />
         </div>
     )
 }
